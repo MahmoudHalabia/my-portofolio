@@ -194,6 +194,45 @@ header  .main-nav li a:hover {
     margin: 5px 0 0;
     max-width: 400px;
 }
+.landing .container .info .resume {
+    position: relative;
+    font-size: 22px;
+    width: 150px;
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 3px solid var(--main-color);
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: var(--main-transition);
+}
+@media screen and (max-width: 990px) {
+    .landing .container .info .resume {
+        margin: 0 auto;
+    }
+}
+.landing .container .info .resume::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    background: var(--gradient);
+    z-index: -1;
+    transition: var(--main-transition);
+}
+.landing .container .info .resume:hover {
+    border: 0;
+    color: white;
+}
+.landing .container .info .resume:hover::before {
+    left: 0;
+}
 @media (max-width: 991px) {
     .landing .container .info p {
         margin: 0 auto;
@@ -205,11 +244,46 @@ header  .main-nav li a:hover {
     max-width: 600px;
     animation: up-and-down 5s linear infinite;
 }
+.about {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.about .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about .container .img {
+    background-image: url(../imgs/my\ img.jpg);
+    width: 380px;
+    height: 380px;
+    background-size: contain;
+    background-position: center center;
+    margin: 20px;
+    box-shadow: 0 5px 5px 5px rgba(13, 110, 253, 0.6);
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+.about p {
+    color: var(--text-color);
+    font-size: 20px;
+    max-width: 400px;
+    letter-spacing: .8px;
+    line-height: 26px;
+}
 .experience {
     text-align: center;
     font-weight: 800;
     font-size: 28px;
     padding-top: 4rem;
+}
+.experience .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 10px;
 }
 .skills {
     max-width: 700px;
@@ -249,13 +323,14 @@ header  .main-nav li a:hover {
     gap: 30px;
 }
 .projects .container .box {
+    position: relative;
     background-color: #eee;
     box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
     border-radius: 6px;
     align-items: center;
     padding: 10px;
+    margin: 0 auto;
     width: fit-content;
-    position: relative;
     transition: var(--main-transition);
 }
 .projects .container .box:hover {
@@ -266,29 +341,49 @@ header  .main-nav li a:hover {
     max-width: 300px;
 }
 .projects .container .box p {
+    font-size: 18px;
     line-height: 1.6;
     color: var(--text-color);
     max-width: 300px;
 }
 .projects .container .box .link {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 10px 0 0;
-    border-top: 1px solid black;
 }
 .projects .container .box .link a {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    padding: 10px 20px;
     font-weight: bold;
-    color: var(--main-color);
+    color: black;
     font-size: 18px;
     letter-spacing: -0.3px;
-}
-.projects .container .box .link i {
-    color: var(--main-color);
+    border: 3px solid var(--main-color);
+    border-radius: 5px;
+    overflow: hidden;
     transition: var(--main-transition);
 }
-.projects .container .box:hover i {
-    animation: moving-arrow 0.5s linear infinite;
+.projects .container .box .link a:hover {
+    color: white;
+    border: none;
+}
+.projects .container .box .link a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: var(--gradient);
+    z-index: -1;
+    transition: var(--main-transition);
+}
+.projects .container .box .link a:hover:before {
+    left: 0;
 }
 .contact {
     padding-top: var(--section-padding);
@@ -341,10 +436,14 @@ header  .main-nav li a:hover {
     background: none;
     outline: 0;
     border: 0;
-    font-size: 22px;
+    font-size: 20px;
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
     margin: 10px 0;
+}
+::-webkit-input-placeholder {
+    color: black;
+    opacity: .7;
 }
 .contact .contact-right textarea {
     width: 100%;
@@ -354,9 +453,9 @@ header  .main-nav li a:hover {
     background: none;
     border: none;
     outline: none;
-    color: #777;
+    color: black;
     border-bottom: 1px solid #ddd;
-    font-size: 22px;
+    font-size: 20px;
     padding: 10px 0;
     margin: 10px 0;
 }
@@ -424,6 +523,14 @@ footer small span {
 @keyframes moving-arrow {
     100% {
         transform: translateX(-10px);
+    }
+}
+@keyframes animate {
+    0%, 100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
     }
 }
 @media (max-width: 991px) {
