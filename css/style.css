@@ -255,7 +255,7 @@ header  .main-nav li a:hover {
     flex-wrap: wrap;
 }
 .about .container .img {
-    background-image: url(../imgs/myimg.jpg);
+    background-image: url(../imgs/my\ img.jpg);
     width: 380px;
     height: 380px;
     background-size: contain;
