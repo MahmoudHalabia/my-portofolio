@@ -282,8 +282,12 @@ header  .main-nav li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 3rem;
     margin-top: 10px;
+}
+.experience .logos img {
+    max-width: 200px;
 }
 .skills {
     max-width: 700px;
