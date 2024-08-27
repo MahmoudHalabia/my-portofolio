@@ -1,3 +1,4 @@
+
 * {
     --webkit-box-siszing: border-box;
     --moz-box-sizing: border-box;
@@ -88,6 +89,8 @@ header .container {
     align-items: center;
     flex-wrap: wrap;
     position: relative;
+    top: 0;
+    left: 0;
 }
 header .container .logo {
     color: var(--main-color);
@@ -240,6 +243,7 @@ header  .main-nav li a:hover {
     }
 }
 .landing .container .img img {
+    border-radius: 50%;
     position: relative;
     max-width: 600px;
     animation: up-and-down 5s linear infinite;
@@ -255,7 +259,7 @@ header  .main-nav li a:hover {
     flex-wrap: wrap;
 }
 .about .container .img {
-    background-image: url(../imgs/myimg.jpg);
+    background-image: url(../images/mmm.jpg);
     width: 380px;
     height: 380px;
     background-size: contain;
@@ -304,14 +308,13 @@ header  .main-nav li a:hover {
     display: flex;
     justify-content: space-around;
     padding: 5px;
-    border: 3px solid var(--main-color);
     transition: var(--main-transition);
 }
 .skill:hover {
     transform: scale(1.1);
 }
 .skill img {
-    max-width: 30px;
+    max-width: 50px;
     object-fit: contain;
 }
 .projects {
@@ -343,8 +346,15 @@ header  .main-nav li a:hover {
 .projects .container .box img {
     align-items: center;
     max-width: 300px;
+    max-height: 550px;
+}
+.projects .container .box h2 {
+    margin: 0;
+    padding: 0;
 }
 .projects .container .box p {
+    margin: 0;
+    padding: 10px;
     font-size: 18px;
     line-height: 1.6;
     color: var(--text-color);
@@ -352,16 +362,15 @@ header  .main-nav li a:hover {
 }
 .projects .container .box .link {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 10px 0 0;
 }
 .projects .container .box .link a {
     position: relative;
     display: flex;
-    justify-content: space-between;
-    width: 120px;
-    padding: 10px 20px;
+    justify-content: center;
+    width: 100px;
+    padding: 10px;
     font-weight: bold;
     color: black;
     font-size: 18px;
@@ -388,6 +397,10 @@ header  .main-nav li a:hover {
 }
 .projects .container .box .link a:hover:before {
     left: 0;
+}
+.projects .container .box .link p {
+    padding: 0;
+    margin: 0;
 }
 .contact {
     padding-top: var(--section-padding);
