@@ -259,7 +259,7 @@ header  .main-nav li a:hover {
     flex-wrap: wrap;
 }
 .about .container .img {
-    background-image: url(../images/mmm.jpg);
+    background-image: url(../imgs/mmm.jpg);
     width: 380px;
     height: 380px;
     background-size: contain;
